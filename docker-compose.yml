@@ -1,0 +1,6 @@
+services:
+  api-address:
+    image: soilfish/address-api:latest
+    # restart: always
+    ports:
+      - "3000:3000"
