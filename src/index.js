@@ -10,15 +10,9 @@ const cache = apicache.middleware;
 app.use(cache("10 minutes"));
 app.use(express.json());
 
-const corsOptions = {
-  origin: "*",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"],
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 
 app.get("/api/v1/address", (_req, res) => {
